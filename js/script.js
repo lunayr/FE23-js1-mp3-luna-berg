@@ -8,9 +8,7 @@ restCountryForm.addEventListener("submit", function (event) {
 
 function getCountryInfo() {
   const countryLangInput = document.querySelector("#countryLangInput").value;
-  const searchType = document.querySelector(
-    'input[name="searchType"]:checked'
-  ).value;
+  const searchType = document.querySelector('input[name="searchType"]:checked').value;
 
   console.log(countryLangInput, searchType);
 
