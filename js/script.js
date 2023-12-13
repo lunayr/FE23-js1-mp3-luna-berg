@@ -47,7 +47,7 @@ function displayResult(data) {
     results.appendChild(noCountry);
   }
 
-  sortedData = sortCountryByPopulation(data);
+  let sortedData = sortCountryByPopulation(data);
 
   sortedData.forEach((country) => {
     const countryContainer = document.createElement("div");
