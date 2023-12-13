@@ -20,9 +20,6 @@ function getCountryInfo() {
     url = `https://restcountries.com/v3.1/name/${countryLangInput}`;
   } else if (searchType === "language") {
     url = `https://restcountries.com/v3.1/lang/${countryLangInput}`;
-  } else {
-    console.error("Invalid search type");
-    return;
   }
 
   fetch(url)
@@ -35,9 +32,6 @@ function getCountryInfo() {
     })
     .then((data) => {
       displayResult(data);
-    })
-    .catch((error) => {
-      console.error("Error, can't get data", error);
     });
 }
 
