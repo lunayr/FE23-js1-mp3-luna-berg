@@ -39,7 +39,7 @@ function getCountryInfo() {
       displayResult(data);
     })
     .catch((error) => {
-      console.error("Error fetching data", error);
+      console.error("Error, can't get data", error);
     });
 }
 
