@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="/css/style.css" />
+    <script src="./js/script.js" defer></script>
+  </head>
+  <body>
+    <form id="restCountryForm">
+      <input type="text" id="countryLangInput" value="English" />
+
+      <input
+        type="radio"
+        id="language"
+        value="language"
+        name="searchType"
+        checked
+      />
+      <label for="language">Language</label>
+
+      <input type="radio" id="country" value="name" name="searchType" />
+      <label for="country">Name</label>
+      <button>Get Countries</button>
+    </form>
+
+    <div id="results"></div>
+  </body>
+</html>

@@ -1,0 +1,25 @@
+#results {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px;
+  padding: 16px;
+}
+
+.country-container {
+  width: 20%;
+  flex: 1 1 auto;
+  background: #fff;
+  border-radius: 12px;
+  overflow: hidden;
+  padding: 12px;
+  border: #ccc solid 1px;
+  max-width: 300px;
+}
+
+.country-container img {
+  width: 100%;
+  aspect-ratio: 24 / 9;
+  object-fit: cover;
+  border: #ccc solid 1px;
+  border-radius: 6px;
+}
