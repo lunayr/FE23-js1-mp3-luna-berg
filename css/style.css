@@ -23,3 +23,7 @@
   border: #ccc solid 1px;
   border-radius: 6px;
 }
+
+.hide {
+  display: none;
+}
