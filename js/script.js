@@ -1,5 +1,6 @@
 const results = document.querySelector("#results");
 const restCountryForm = document.querySelector("#restCountryForm");
+const h2Error = document.querySelector(".hide");
 
 restCountryForm.addEventListener("submit", function (event) {
   event.preventDefault();
@@ -24,15 +25,20 @@ function getCountryInfo() {
 
   fetch(url)
     .then((res) => {
-      if (res.status >= 200 && res.status <= 300) {
-        return res.json();
-      } else {
-        return [];
-      }
+      return res.json();
+      // if (res.status >= 200 && res.status <= 300) {
+      //   return res.json();
+      // } else {
+      //   return [];
+      // }
     })
     .then((data) => {
       displayResult(data);
-    });
+    })
+    .catch(()=>{
+      console.error('promise rejected');
+      pEl.classList.remove('hide');
+    })
 }
 
 function sortCountryByPopulation(data) {
@@ -40,12 +46,12 @@ function sortCountryByPopulation(data) {
 }
 
 function displayResult(data) {
-  if (data.length === 0) {
-    const noCountry = document.createElement("div");
-    noCountry.classList.add("no-country");
-    noCountry.innerText = "No country found";
-    results.appendChild(noCountry);
-  }
+  // if (data.length === 0) {
+  //   const noCountry = document.createElement("div");
+  //   noCountry.classList.add("no-country");
+  //   noCountry.innerText = "No country found";
+  //   results.appendChild(noCountry);
+  // }
 
   let sortedData = sortCountryByPopulation(data);
 
