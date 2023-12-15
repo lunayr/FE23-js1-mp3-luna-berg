@@ -1,3 +1,5 @@
+
+// Försök att undvika globala variablar så mycket du kan
 const results = document.querySelector("#results");
 const restCountryForm = document.querySelector("#restCountryForm");
 const h2Error = document.querySelector(".hide");
